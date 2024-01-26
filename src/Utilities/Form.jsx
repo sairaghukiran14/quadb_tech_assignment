@@ -6,8 +6,11 @@ const Form = (props) => {
   const [contact, setContact] = useState();
   const [isBooked, setIsBooked] = useState(false);
   return (
-    <div className="form_section absolute top-0 bottom-0 h-80 m-auto bg-white right-0 left-0 w-max z-50 rounded">
-      <form action="" className="flex items-center gap-3 p-3">
+    <div className="form_section absolute top-0 bottom-0 sm:h-80 h-max w-[80%] sm:w-max m-auto bg-white right-0 left-0  z-50 rounded">
+      <form
+        action=""
+        className="flex flex-col items-center gap-3 p-3 sm:flex-row"
+      >
         <div className="div flex flex-col items-center justify-center gap-2">
           <div className="showname_book">{props.name}</div>
           <div className="show_image w-40">
@@ -52,7 +55,7 @@ const Form = (props) => {
             </div>
           </div>
         ) : (
-          <div className="input_section flex flex-col gap-2 w-64 mt-5">
+          <div className="input_section flex flex-col gap-2 sm:w-64 w-44 mt-5">
             <input
               type="text"
               placeholder="Enter Your Name"

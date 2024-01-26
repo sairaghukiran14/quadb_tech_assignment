@@ -26,26 +26,26 @@ const ShowSummaryPage = () => {
         isOpen && "backdrop-brightness-50 bg-black/30 "
       } `}
     >
-      <div className={`content `}>
+      <div className={`content`}>
         <div className="obsolute logo font-bold text-white text-3xl text-center tracking-widest bg-black">
           SHOWGLANZA
         </div>
-        <div className="content_section flex justify-around items-center mt-2">
-          <div className="poster_section flex justify-center items-center w-[40%]">
+        <div className="content_section flex flex-col justify-around items-center mt-2 sm:flex-row sm:gap-2">
+          <div className="poster_section flex justify-center items-center w-[90%] sm:w-[40%] ">
             <img
               src={indishow?.show.image?.original || sample}
               alt=""
               className={`rounded   ${isOpen && " blur-sm"}`}
             />
           </div>
-          <div className="show_details border rounded-lg flex flex-col gap-2 w-[40%] p-3">
+          <div className="show_details border rounded-lg flex flex-col gap-2 w-[90%] text-sm sm:text-base sm:w-[40%] p-3 ">
             <div className="show_name font-semibold text-xl">
               {indishow?.show.name}
             </div>
             <div className="rating">
               ⭐️{indishow?.show.rating.average || 5}/10
             </div>
-            <div className="summary text-justify">
+            <div className="summary text-justify sm:text-sm">
               {indishow?.show.summary
                 .replace("<p>", "")
                 .replace("</p>", "")
